@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Edit product</title>
+</head>
+<body>
+ <div align="center">
+<h2>Product Edit</h2>
+<br>
+
+<form action="#" th:action="@{/save}" th:object="${product}" method="post">
+<table border="1" cellpading ="5">
+<tr>
+<td>Product ID</td>
+<td><input type="text" th:field="*{id}" readonly="readonly"/></td>
+</tr>
+
+<tr>
+<td>Product Name</td>
+<td><input type="text" th:field="*{name}" /></td>
+</tr>
+
+<tr>
+<td>Product brand</td>
+<td><input type="text" th:field="*{brand}" /></td>
+</tr>
+
+<tr>
+<td>Product Made In</td>
+<td><input type="text" th:field="*{madein}" /></td>
+</tr>
+
+<tr>
+<td>Product Price</td>
+<td><input type="text" th:field="*{price}" /></td>
+</tr>
+
+<tr>
+<td colspan="2" align="center"><button type="submit">Save</button></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
